@@ -1,0 +1,20 @@
+$green: #3BC8AA;
+$orange: #ff551a;
+$black: #1e1e1e;
+
+$titleFont: "PT Serif";
+$bodyFont: "Work Sans";
+
+body {
+  color: $black;
+  font-family: $bodyFont;
+}
+
+h1 {
+  font-family: $titleFont;
+}
+
+h2 {
+  font-family: $titleFont;
+  color: $green;
+}
