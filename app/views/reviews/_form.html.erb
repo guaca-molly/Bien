@@ -16,6 +16,12 @@
   </p>
 
   <p>
+    <%= form.label :restaurant %>
+    <%= form.text_field :restaurant %>
+  </p>
+
+
+  <p>
     <%= form.label :body %>
     <%= form.text_area :body %>
   </p>
@@ -24,6 +30,11 @@
     <%= form.label :score %>
     <%= form.number_field :score %>
   </p>
+
+  <p>
+  <%= form.label :ambiance %>
+  <%= form.text_field :ambiance %>
+</p>
 
   <%= form.submit "Save review" %>
 

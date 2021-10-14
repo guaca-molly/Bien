@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bien Reviews - The best restaurants in the world</title>
+    <title><%= content_for :page_title %> - Bien Reviews - The best restaurants in the world</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -27,7 +27,7 @@
     <main>
       <%= yield %>
     </main>
-    
+
     <footer>
       Copyright 2021 Bien Reviews
     </footer>
