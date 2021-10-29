@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
     @highly_rated_reviews = Review.where("score >= 8")
 
-    @featured_reviews = Review.where("is_featured == true")
+    @featured_reviews = Review.where(is_featured: true)
   end 
 
   def about
