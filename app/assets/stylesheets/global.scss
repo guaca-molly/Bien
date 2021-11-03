@@ -75,6 +75,11 @@ input[type=submit] {
   border-color: $orange;
 }
 
+input[type=score], input[type=price], input[type=cuisine] {
+  border: 1px solid #cccccc;
+  padding: 7px 10px;
+}
+
 textarea {
   min-height: 400px;
 }
