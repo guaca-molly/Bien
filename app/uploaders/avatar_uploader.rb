@@ -1,18 +1,23 @@
-class ContentImageUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
-  #storage :fog
+  # storage :fog
 
-   #size to fit the maximum width and height
-   process resize_to_fit: [2000, 1200]
-
-   version :medium do 
+    #size to fit the maximum width and height
     process resize_to_fit: [1200, 800]
-  end
+
+    version :medium do 
+      process resize_to_fit: [800, 400]
+    end
+  
+  
+    version :thumb do
+      process resize_to_fill: [150,150]
+    end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
