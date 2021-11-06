@@ -18,4 +18,6 @@ class BookmarksController < ApplicationController
     redirect_to review_path(@review)
   end 
 
+  def show
+  end 
 end

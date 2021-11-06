@@ -1,7 +1,16 @@
-<h2>All users</h2>
-<% @users.each do |user| %>
-  <%= image_tag(user.avatar.thumb.url) %>
-  <p> 
-  <%= user.username %> (<%= user.email %>)
-  </p>
+<div class= "editUser">
+<h2> <%= @current_user.username %>'s profile </h2>
+<%= link_to "Edit your profile", edit_user_path(@current_user) %>
+</div>
+
+<p><%= image_tag(@current_user.avatar.thumb.url) %></p>
+
+<h3> My reviews </h3>
+<% @logged_in_user_reviews.each do |review| %>
+  <div class="review>
+    <%= image_tag(review.photo.thumb.url)%>
+    <h4> <%= link_to review.title, review_path(review) %> </h4>
+  </div>
 <% end %>
+
+
