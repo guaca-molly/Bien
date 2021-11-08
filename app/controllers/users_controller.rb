@@ -27,7 +27,9 @@ class UsersController < ApplicationController
     @current_user = User.find(session[:user_id])
     
     #update with the new info from the form
-    @current_user.update(form_params)
+    if @current_user.update(form_params)
+      flash[:success] = "Your account has been updated!"
+    end
     #redirect somewhere
     redirect_to users_path
   end
@@ -53,6 +55,8 @@ class UsersController < ApplicationController
     if @user.save
       #save the session with the user
       session[:user_id] = @user.id
+
+      flash[:success] = "Welcome to bien reviews"
 
       redirect_to users_path
     else

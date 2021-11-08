@@ -130,3 +130,9 @@ nav.filters {
   display: flex;
   justify-content: space-between;
 }
+
+.success {
+  background-color: $green;
+  color: $lightYellow;
+  padding: 10px 30px;
+}

@@ -44,6 +44,7 @@ class ReviewsController < ApplicationController
     # we want to check if the model can be save and if it is go to homepage again
     # if it isnt , show the new form
     if @review.save
+      flash[:success] = "Your review has been posted!"
       redirect_to root_path
     else 
       #show the view for new.html.erb
